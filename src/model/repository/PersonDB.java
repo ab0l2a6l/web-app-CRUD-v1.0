@@ -5,9 +5,9 @@ import model.entity.Person;
 import java.util.List;
 
 public interface PersonDB {
-    void save (Person person)throws Exception;
-    void delete(Person person)throws Exception;
-    void update (Person person)throws Exception;
+    boolean save (Person person);
+    boolean delete(Person person);
+    boolean update (Person person);
     List<Person> selectAll()throws Exception;
     Person selectOne(long id)throws Exception;
 }

@@ -17,6 +17,8 @@
     person.setAge(Byte.parseByte(request.getParameter("age")));
 
     PersonControler personControler = new PersonControler();
-    personControler.update(person);
+    if(personControler.update(person))
     response.sendRedirect("three-update.jsp");
+    else
+        response.sendRedirect("exeption.jsp");
 %>

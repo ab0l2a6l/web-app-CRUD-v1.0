@@ -5,9 +5,9 @@ import model.entity.Person;
 import java.util.List;
 
 public interface PersonService {
-    void save (Person person);
-    void delete(Person person);
-    void update (Person person);
+    boolean save (Person person);
+    boolean delete(Person person);
+    boolean update (Person person);
     List<Person> selectAll();
     Person selectOne(long id);
 }

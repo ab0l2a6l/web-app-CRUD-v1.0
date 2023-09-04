@@ -18,6 +18,8 @@
     person.setAge(Byte.parseByte(request.getParameter("age")));
 
     PersonControler personControler = new PersonControler();
-    personControler.save(person);
-    response.sendRedirect("three-insert.jsp");
+    if (personControler.save(person))
+        response.sendRedirect("three-insert.jsp");
+    else
+        response.sendRedirect("exeption.jsp");
 %>

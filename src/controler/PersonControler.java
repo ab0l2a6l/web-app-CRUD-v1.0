@@ -9,16 +9,16 @@ import java.util.List;
 public class PersonControler {
     PersonService personService = PersonServiceIImpl.getInstance();
 
-    public void save(Person person) {
-        personService.save(person);
+    public boolean save(Person person) {
+           return personService.save(person);
     }
 
-    public void delete(Person person) {
-        personService.delete(person);
+    public boolean delete(Person person) {
+       return personService.delete(person);
     }
 
-    public void update(Person person) {
-        personService.update(person);
+    public boolean update(Person person) {
+        return personService.update(person);
     }
 
     public List<Person> selectAll() {

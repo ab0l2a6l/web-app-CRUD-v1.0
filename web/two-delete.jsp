@@ -17,6 +17,8 @@
     person.setAge(Byte.parseByte(request.getParameter("age")));
 
     PersonControler personControler = new PersonControler();
-    personControler.delete(person);
-    response.sendRedirect("three-delete.jsp");
+    if (personControler.delete(person))
+        response.sendRedirect("three-delete.jsp");
+    else
+        response.sendRedirect("exeption.jsp");
 %>

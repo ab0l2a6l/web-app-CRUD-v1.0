@@ -4,45 +4,50 @@ import model.entity.Person;
 import model.repository.PersonDB;
 import model.repository.PersonDBImpl;
 
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
 
 public class PersonServiceIImpl implements PersonService {
-    private PersonServiceIImpl(){}
+    private PersonServiceIImpl() {
+    }
+
     private static final PersonServiceIImpl PERSON_SERVICE_I = new PersonServiceIImpl();
 
     public static PersonServiceIImpl getInstance() {
         return PERSON_SERVICE_I;
     }
-    PersonDB personDB ;
+
+    PersonDB personDB;
 
     @Override
-    public void save(Person person) {
+    public boolean save(Person person) {
         try {
-           personDB = new PersonDBImpl();
-           personDB.save(person);
-        }catch (Exception e) {
-            throw new RuntimeException(e);
+            personDB = new PersonDBImpl();
+            return personDB.save(person);
+        } catch (Exception e) {
+            return false;
         }
     }
 
     @Override
-    public void delete(Person person) {
+    public boolean delete(Person person) {
         try {
             personDB = new PersonDBImpl();
-            personDB.delete(person);
-        }catch (Exception e) {
-            throw new RuntimeException(e);
+            return personDB.delete(person);
+        } catch (Exception e) {
+            return false;
         }
     }
 
     @Override
-    public void update(Person person) {
+    public boolean update(Person person) {
         try {
             personDB = new PersonDBImpl();
-            personDB.update(person);
-        }catch (Exception e) {
-            throw new RuntimeException(e);
+            return personDB.update(person);
+        } catch (Exception e) {
+            return false;
         }
+
     }
 
     @Override
@@ -51,7 +56,7 @@ public class PersonServiceIImpl implements PersonService {
         try {
             personDB = new PersonDBImpl();
             personList = personDB.selectAll();
-        }catch (Exception e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
         return personList;
@@ -59,11 +64,11 @@ public class PersonServiceIImpl implements PersonService {
 
     @Override
     public Person selectOne(long id) {
-        Person person ;
+        Person person;
         try {
             personDB = new PersonDBImpl();
-           person =  personDB.selectOne(id);
-        }catch (Exception e) {
+            person = personDB.selectOne(id);
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
         return person;

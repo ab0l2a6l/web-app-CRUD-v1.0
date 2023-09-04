@@ -2,10 +2,7 @@ package model.repository;
 
 import model.entity.Person;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,40 +18,55 @@ public class PersonDBImpl implements PersonDB, AutoCloseable {
     }
 
     @Override
-    public void save(Person person) throws Exception {
-        System.out.println("inserting . . . ");
-        preparedStatement = connection.prepareStatement("insert into person (id ,first_name , last_name , age , email , phone_number)values(?,?,?,?,?,?) ");
-        preparedStatement.setLong(1, person.getId());
-        preparedStatement.setString(2, person.getFirstName());
-        preparedStatement.setString(3, person.getLastName());
-        preparedStatement.setByte(4, person.getAge());
-        preparedStatement.setString(5, person.getEmail());
-        preparedStatement.setLong(6, person.getPhoneNumber());
-        preparedStatement.executeUpdate();
-        System.out.println("inserted . . . ");
+    public boolean save(Person person) {
+        try {
+            System.out.println("inserting . . . ");
+            preparedStatement = connection.prepareStatement("insert into person (id ,first_name , last_name , age , email , phone_number)values(?,?,?,?,?,?) ");
+            preparedStatement.setLong(1, person.getId());
+            preparedStatement.setString(2, person.getFirstName());
+            preparedStatement.setString(3, person.getLastName());
+            preparedStatement.setByte(4, person.getAge());
+            preparedStatement.setString(5, person.getEmail());
+            preparedStatement.setLong(6, person.getPhoneNumber());
+            preparedStatement.executeUpdate();
+            System.out.println("inserted . . . ");
+        } catch (Exception e) {
+                return false;
+        }
+        return true;
     }
 
     @Override
-    public void delete(Person person) throws Exception {
-        System.out.println("deleting . . . ");
-        preparedStatement = connection.prepareStatement("delete  from person where id = ?");
-        preparedStatement.setLong(1, person.getId());
-        preparedStatement.executeUpdate();
-        System.out.println("deleted . . . ");
+    public boolean delete(Person person) {
+        try {
+            System.out.println("deleting . . . ");
+            preparedStatement = connection.prepareStatement("delete  from person where id = ?");
+            preparedStatement.setLong(1, person.getId());
+            preparedStatement.executeUpdate();
+            System.out.println("deleted . . . ");
+        }catch (Exception e) {
+            return false;
+        }
+        return true;
     }
 
     @Override
-    public void update(Person person) throws Exception {
-        System.out.println("updating  . . . ");
-        preparedStatement = connection.prepareStatement("update person set first_name = ?  , last_name = ? , age = ? , email = ? , phone_number = ? where id = ? ");
-        preparedStatement.setString(1, person.getFirstName());
-        preparedStatement.setString(2, person.getLastName());
-        preparedStatement.setString(3, String.valueOf(person.getAge()));
-        preparedStatement.setString(4, person.getEmail());
-        preparedStatement.setString(5, String.valueOf(person.getPhoneNumber()));
-        preparedStatement.setString(6, String.valueOf(person.getId()));
-        preparedStatement.executeUpdate();
-        System.out.println("updated . . . ");
+    public boolean update(Person person) {
+        try {
+            System.out.println("updating  . . . ");
+            preparedStatement = connection.prepareStatement("update person set first_name = ?  , last_name = ? , age = ? , email = ? , phone_number = ? where id = ? ");
+            preparedStatement.setString(1, person.getFirstName());
+            preparedStatement.setString(2, person.getLastName());
+            preparedStatement.setString(3, String.valueOf(person.getAge()));
+            preparedStatement.setString(4, person.getEmail());
+            preparedStatement.setString(5, String.valueOf(person.getPhoneNumber()));
+            preparedStatement.setString(6, String.valueOf(person.getId()));
+            preparedStatement.executeUpdate();
+            System.out.println("updated . . . ");
+        }catch (Exception e) {
+            return false;
+        }
+        return true;
     }
 
     @Override

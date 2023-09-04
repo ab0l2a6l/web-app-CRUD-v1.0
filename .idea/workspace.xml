@@ -9,38 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce032fb3-293d-4aa5-bff9-22563fbf24cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/web_app_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_0_33.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controler/PersonControler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/entity/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/repository/PersonDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/repository/PersonDBImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/service/PersonService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/service/PersonServiceIImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-j-8.0.33.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/deleteValidation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/findOne.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/insertValidation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/selectAll.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/selectOneValidation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/three-delete.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/three-insert.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/three-update.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/two-delete.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/two-insert.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/two-update.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/updateValidation.js" afterDir="false" />
+    <list default="true" id="ce032fb3-293d-4aa5-bff9-22563fbf24cc" name="Changes" comment=".">
+      <change afterPath="$PROJECT_DIR$/web/exeption.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controler/PersonControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controler/PersonControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/repository/PersonDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/repository/PersonDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/repository/PersonDBImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/repository/PersonDBImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/service/PersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/service/PersonServiceIImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/service/PersonServiceIImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/two-delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/two-delete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/two-insert.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/two-insert.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/two-update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/two-update.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,8 +173,22 @@
       <updated>1693735533417</updated>
       <workItem from="1693735538643" duration="7314000" />
       <workItem from="1693743652501" duration="974000" />
-      <workItem from="1693745207706" duration="4015000" />
+      <workItem from="1693745207706" duration="4259000" />
+      <workItem from="1693765049044" duration="1712000" />
+      <workItem from="1693849071034" duration="2861000" />
     </task>
+    <task id="LOCAL-00001" summary=".">
+      <created>1693764606842</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1693764606842</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>
